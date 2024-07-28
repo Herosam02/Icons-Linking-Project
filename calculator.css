@@ -1,0 +1,134 @@
+body {
+    display: flex;
+}
+.container {
+    margin: auto;
+}
+.calculator {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 300px;
+    margin: auto;
+}
+.display {
+    margin-bottom: 10px;
+}
+.display input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+#result{
+    height: 10px;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="button"] {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2em;
+    margin: 5px;
+    cursor: pointer;
+}
+input[type="button"].operator {
+    background-color: #f0f0f0;
+}
+input[type="button"].operator:hover {
+    background-color: #e0e0e0;
+}
+input[type="button"].equals {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+}
+input[type="button"].equals:hover {
+    background-color: #45a049;
+}
+
+.christmas-Box{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #ff004f;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Popins' , sans-serif;
+    color: #fff;
+    font-size: 30px;
+  }
+  .christmas-Box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    z-index: 1;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,transparent,transparent,#fff,#fff,#fff);
+    animation: animate 6s linear infinite;
+  }
+  .christmas-Box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    z-index: 1;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,transparent,transparent,#0cf,#0cf,#0cf);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+  }
+  .borderLine{
+    position: absolute;
+    inset: 0;
+    left: 0;
+  }
+  .borderLine::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    z-index: 1;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,transparent,transparent,rgb(4, 100, 124),rgb(4, 100, 124),rgb(4, 100, 124));
+    animation: animate 6s linear infinite;
+    animation-delay: -1.4s;
+  }
+  .borderLine::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    z-index: 1;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,transparent,transparent,#0c2,#0c2,#0c2);
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+  }
+  @keyframes animate{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+  .christmas-Box form{
+    z-index: 2;
+    position: absolute;
+    inset: 4px;
+    background: green;
+    border-radius: 8px;
+    padding: 50px 40px;
+  }

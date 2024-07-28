@@ -1,0 +1,101 @@
+body{
+    background-color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.img {
+    margin-left: 40%;
+    margin-top: 20px;
+  }
+  .christmas-Box{
+    position: relative;
+    width: 380px;
+    height: 300px;
+    background: #ff004f;
+    overflow: hidden;
+    font-family: 'Popins' , sans-serif;
+  }
+  .christmas-Box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    z-index: 1;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,transparent,transparent,#fff,#fff,#fff);
+    animation: animate 6s linear infinite;
+  }
+  .christmas-Box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    z-index: 1;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,transparent,transparent,#0cf,#0cf,#0cf);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+  }
+  .borderLine{
+    position: absolute;
+    inset: 0;
+    left: 0;
+  }
+  .borderLine::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    z-index: 1;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,transparent,transparent,rgb(4, 100, 124),rgb(4, 100, 124),rgb(4, 100, 124));
+    animation: animate 6s linear infinite;
+    animation-delay: -1.4s;
+  }
+  .borderLine::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    z-index: 1;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,transparent,transparent,#0c2,#0c2,#0c2);
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+  }
+  @keyframes animate{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  .christmas-Box form{
+    z-index: 2;
+    position: absolute;
+    inset: 4px;
+    background: green;
+    border-radius: 8px;
+    padding: 50px 40px;
+  }
+
+  .blue{
+    background-color: blue;
+    padding: 1px;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 2px;
+  }

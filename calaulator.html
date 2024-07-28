@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body style="display: flex;">      
+        <a href="index.html" class="christmas-Box">
+            <div class="borderLine"></div>
+            <form>
+                Go Back
+            </form>
+        </a>
+    <section class="container">
+        <div class="calculator">
+            <div class="display">
+                <input type="text" id="display">  
+            </div>
+            <div id="showResult">
+                <p id="result"></p>
+            </div>
+            <div>
+                <input type="button" value="AC" onclick="clearDisplay()">
+                <input type="button" value="DE" onclick="deleteLast()">
+                <input type="button" value="." onclick="appendToDisplay('.')">
+                <input type="button" value="/" onclick="appendToDisplay('/')">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="appendToDisplay('7')">
+                <input type="button" value="8" onclick="appendToDisplay('8')">
+                <input type="button" value="9" onclick="appendToDisplay('9')">
+                <input type="button" value="*" onclick="appendToDisplay('*')">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="appendToDisplay('4')">
+                <input type="button" value="5" onclick="appendToDisplay('5')">
+                <input type="button" value="6" onclick="appendToDisplay('6')">
+                <input type="button" value="-" onclick="appendToDisplay('-')">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="appendToDisplay('1')">
+                <input type="button" value="2" onclick="appendToDisplay('2')">
+                <input type="button" value="3" onclick="appendToDisplay('3')">
+                <input type="button" value="+" onclick="appendToDisplay('+')">
+            </div>
+            <div>
+                <input type="button" value="00" onclick="appendToDisplay('00')">
+                <input type="button" value="0" onclick="appendToDisplay('0')">
+                <!-- Remove the equals button -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById('display').value += value;
+            evaluateExpression();
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+            document.getElementById('result').innerText = '';
+        }
+
+        function deleteLast() {
+            var displayValue = document.getElementById('display').value;
+            document.getElementById('display').value = displayValue.slice(0, -1);
+            evaluateExpression();
+        }
+
+        function evaluateExpression() {
+            var expression = document.getElementById('display').value;
+            var resultParagraph = document.getElementById('result');
+
+            if (expression.length >= 1) {
+                try {
+                    resultParagraph.innerText = eval(expression);
+                } catch (error) {
+                    resultParagraph.innerText = '';
+                }
+            } else {
+                resultParagraph.innerText = '';
+            }
+        }
+    </script>
+</body>
+</html>

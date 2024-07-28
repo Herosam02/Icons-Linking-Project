@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="minus.css">
+</head>
+<body>
+    <div class="grid">
+        <h1 class="ken">What is Javascript</h1>
+
+        <p id="demo">Javascript is</p>
+
+        <button type="button" onclick='document.getElementById("demo").innerHTML = "Javascript is a language that contains fullstack Project"'>This is what Javascript is</button>
+
+        <button type="button" onclick='document.getElementById("demo").innerHTML = "Javascript is"'>Go back to the first word</button>
+
+        <div class="flex">
+            <button onclick="document.getElementById('myImage').src='yellow.jfif' ">Turn on the light</button>
+            <img src="img/normal.jfif" width="100px" id="myImage">
+            <button onclick="document.getElementById('myImage').src='img/normal.jfif' ">Turn of the light</button>
+        </div>
+
+        <button onclick="window.print()">Save or Print this page</button>
+
+        <a href="index.html">Go Back</a>
+    </div>
+</body>
+</html>

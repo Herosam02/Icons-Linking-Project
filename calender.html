@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sliding Calendar</title>
+<link rel="stylesheet" href="calender.css">
+</head>
+<body>
+
+<div class="prev-month" onclick="scrollCalendar('left')">&#10094;</div>
+<div class="next-month" onclick="scrollCalendar('right')">&#10095;</div>
+<div class="calendar-container">
+    <div class="calendar-month">
+        <!-- January -->
+        <h2 style="text-align: center;">January 2024</h2>
+        <div style="display: grid;">
+          <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+              <div style="display: grid;">
+                  <p style="font-size: 13px;">Sunday</p>
+                  <button id="nu" style="font-size: 13px; text-align: center;"></button>
+                  <button id="num" style="font-size: 13px; text-align: center;">7</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">14</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">21</button>
+                  <button id="num" style="font-size: 13px; text-align: center; margin-top: 10px;">28</button>
+              </div>
+              <div style="display: grid;">
+                  <p style="font-size: 13px;">Monday</p>
+                  <button id="num" style="font-size: 13px; text-align: center;">1</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">8</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">15</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">22</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">29</button>
+              </div>
+              <div style="display: grid;">
+                  <p style="font-size: 13px;">Tuesday</p>
+                  <button id="num" style="font-size: 13px; text-align: center;">2</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">9</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">16</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">23</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">30</button>
+              </div>
+              <div style="display: grid;">
+                  <p style="font-size: 13px;">Wednesday</p>
+                  <button id="num" style="font-size: 13px; text-align: center;">3</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">10</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">17</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">24</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">31</button>
+              </div>
+              <div style="display: grid;">
+                  <p style="font-size: 13px;">Thursday</p>
+                  <button id="num" style="font-size: 13px; text-align: center;">4</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">11</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">18</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">25</button>
+                  <button id="nu" style="font-size: 13px; text-align: center;"></button>
+              </div>
+              <div style="display: grid;">
+                  <p style="font-size: 13px;">Friday</p>
+                  <button id="num" style="font-size: 13px; text-align: center;">5</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">12</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">19</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">26</button>
+                  <button id="nu" style="font-size: 13px; text-align: center;"></button>
+              </div>
+              <div style="display: grid;">
+                  <p style="font-size: 13px;">Saturday</p>
+                  <button id="num" style="font-size: 13px; text-align: center;">6</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">13</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">20</button>
+                  <button id="num" style="font-size: 13px; text-align: center;">27</button>
+                  <button id="nu" style="font-size: 13px; text-align: center;"></button>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="calendar-month">
+        <!-- February -->
+        <h2 style="text-align: center;">February 2024</h2>
+        <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+          <div class="grid">
+            <p style="font-size: 13px;">Sunday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">4</button>
+            <button id="num" style="font-size: 13px; text-align: center;">11</button>
+            <button id="num" style="font-size: 13px; text-align: center;">18</button>
+            <button id="num" style="font-size: 13px; text-align: center;">25</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Monday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">5</button>
+            <button id="num" style="font-size: 13px; text-align: center;">12</button>
+            <button id="num" style="font-size: 13px; text-align: center;">19</button>
+            <button id="num" style="font-size: 13px; text-align: center;">26</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Tuesday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">6</button>
+            <button id="num" style="font-size: 13px; text-align: center;">13</button>
+            <button id="num" style="font-size: 13px; text-align: center;">20</button>
+            <button id="num" style="font-size: 13px; text-align: center;">27</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Wednesday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">7</button>
+            <button id="num" style="font-size: 13px; text-align: center;">14</button>
+            <button id="num" style="font-size: 13px; text-align: center;">21</button>
+            <button id="num" style="font-size: 13px; text-align: center;">28</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Thursday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">1</button>
+            <button id="num" style="font-size: 13px; text-align: center;">8</button>
+            <button id="num" style="font-size: 13px; text-align: center;">15</button>
+            <button id="num" style="font-size: 13px; text-align: center;">22</button>
+            <button id="num" style="font-size: 13px; text-align: center;">29</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Friday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">2</button>
+            <button id="num" style="font-size: 13px; text-align: center;">9</button>
+            <button id="num" style="font-size: 13px; text-align: center;">16</button>
+            <button id="num" style="font-size: 13px; text-align: center;">23</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Saturday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">3</button>
+            <button id="num" style="font-size: 13px; text-align: center;">10</button>
+            <button id="num" style="font-size: 13px; text-align: center;">17</button>
+            <button id="num" style="font-size: 13px; text-align: center;">24</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+        </div>
+    </div>
+    <div class="calendar-month">
+        <!-- March -->
+        <h2 style="text-align: center;">March 2024</h2>
+        <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+          <div class="grid">
+            <p style="font-size: 13px;">Sunday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">3</button>
+            <button id="num" style="font-size: 13px; text-align: center;">10</button>
+            <button id="num" style="font-size: 13px; text-align: center;">17</button>
+            <button id="num" style="font-size: 13px; text-align: center;">24</button>
+            <button id="num" style="font-size: 13px; text-align: center;">31</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Monday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">4</button>
+            <button id="num" style="font-size: 13px; text-align: center;">11</button>
+            <button id="num" style="font-size: 13px; text-align: center;">18</button>
+            <button id="num" style="font-size: 13px; text-align: center;">25</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Tuesday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">5</button>
+            <button id="num" style="font-size: 13px; text-align: center;">12</button>
+            <button id="num" style="font-size: 13px; text-align: center;">19</button>
+            <button id="num" style="font-size: 13px; text-align: center;">26</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Wednesday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">6</button>
+            <button id="num" style="font-size: 13px; text-align: center;">13</button>
+            <button id="num" style="font-size: 13px; text-align: center;">20</button>
+            <button id="num" style="font-size: 13px; text-align: center;">27</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Thursday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">7</button>
+            <button id="num" style="font-size: 13px; text-align: center;">14</button>
+            <button id="num" style="font-size: 13px; text-align: center;">21</button>
+            <button id="num" style="font-size: 13px; text-align: center;">28</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Friday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">1</button>
+            <button id="num" style="font-size: 13px; text-align: center;">8</button>
+            <button id="num" style="font-size: 13px; text-align: center;">15</button>
+            <button id="num" style="font-size: 13px; text-align: center;">22</button>
+            <button id="num" style="font-size: 13px; text-align: center;">29</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Saturday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">2</button>
+            <button id="num" style="font-size: 13px; text-align: center;">9</button>
+            <button id="num" style="font-size: 13px; text-align: center;">16</button>
+            <button id="num" style="font-size: 13px; text-align: center;">23</button>
+            <button id="num" style="font-size: 13px; text-align: center;">30</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+        </div>
+    </div>
+    <div class="calendar-month">
+        <!-- March -->
+        <h2 style="text-align: center;">April 2024</h2>
+        <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+          <div class="grid">
+            <p style="font-size: 13px;">Sunday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">7</button>
+            <button id="num" style="font-size: 13px; text-align: center;">14</button>
+            <button id="num" style="font-size: 13px; text-align: center;">21</button>
+            <button id="num" style="font-size: 13px; text-align: center;">28</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Monday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">1</button>
+            <button id="num" style="font-size: 13px; text-align: center;">8</button>
+            <button id="num" style="font-size: 13px; text-align: center;">15</button>
+            <button id="num" style="font-size: 13px; text-align: center;">22</button>
+            <button id="num" style="font-size: 13px; text-align: center;">29</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Tuesday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">2</button>
+            <button id="num" style="font-size: 13px; text-align: center;">9</button>
+            <button id="num" style="font-size: 13px; text-align: center;">16</button>
+            <button id="num" style="font-size: 13px; text-align: center;">23</button>
+            <button id="num" style="font-size: 13px; text-align: center;">30</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Wednesday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">3</button>
+            <button id="num" style="font-size: 13px; text-align: center;">10</button>
+            <button id="num" style="font-size: 13px; text-align: center;">17</button>
+            <button id="num" style="font-size: 13px; text-align: center;">24</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Thursday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">4</button>
+            <button id="num" style="font-size: 13px; text-align: center;">11</button>
+            <button id="num" style="font-size: 13px; text-align: center;">18</button>
+            <button id="num" style="font-size: 13px; text-align: center;">25</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Friday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">5</button>
+            <button id="num" style="font-size: 13px; text-align: center;">12</button>
+            <button id="num" style="font-size: 13px; text-align: center;">19</button>
+            <button id="num" style="font-size: 13px; text-align: center;">26</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Saturday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">6</button>
+            <button id="num" style="font-size: 13px; text-align: center;">13</button>
+            <button id="num" style="font-size: 13px; text-align: center;">20</button>
+            <button id="num" style="font-size: 13px; text-align: center;">27</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+        </div>
+    </div>
+    <div class="calendar-month">
+        <!-- March -->
+        <h2 style="text-align: center;">May 2024</h2>
+        <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+          <div style="display: grid;">
+            <p style="font-size: 13px;">Sunday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">5</button>
+            <button id="num" style="font-size: 13px; text-align: center;">12</button>
+            <button id="num" style="font-size: 13px; text-align: center;">19</button>
+            <button id="num" style="font-size: 13px; text-align: center;">26</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Monday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">6</button>
+            <button id="num" style="font-size: 13px; text-align: center;">13</button>
+            <button id="num" style="font-size: 13px; text-align: center;">20</button>
+            <button id="num" style="font-size: 13px; text-align: center;">27</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Tuesday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">7</button>
+            <button id="num" style="font-size: 13px; text-align: center;">14</button>
+            <button id="num" style="font-size: 13px; text-align: center;">21</button>
+            <button style="font-size: 13px; text-align: center;">28</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Wednesday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">1</button>
+            <button id="num" style="font-size: 13px; text-align: center;">8</button>
+            <button id="num" style="font-size: 13px; text-align: center;">15</button>
+            <button id="num" style="font-size: 13px; text-align: center;">22</button>
+            <button id="num" style="font-size: 13px; text-align: center;">29</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Thursday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">2</button>
+            <button id="num" style="font-size: 13px; text-align: center;">9</button>
+            <button id="num" style="font-size: 13px; text-align: center;">16</button>
+            <button id="num" style="font-size: 13px; text-align: center;">23</button>
+            <button id="num" style="font-size: 13px; text-align: center;">30</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Friday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">3</button>
+            <button id="num" style="font-size: 13px; text-align: center;">10</button>
+            <button id="num" style="font-size: 13px; text-align: center;">17</button>
+            <button id="num" style="font-size: 13px; text-align: center;">24</button>
+            <button id="num" style="font-size: 13px; text-align: center;">31</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Saturday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">4</button>
+            <button id="num" style="font-size: 13px; text-align: center;">11</button>
+            <button id="num" style="font-size: 13px; text-align: center;">18</button>
+            <button id="num" style="font-size: 13px; text-align: center;">25</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+        </div>
+    </div>
+    <div class="calendar-month">
+        <!-- March -->
+        <h2 style="text-align: center;">June 2024</h2>
+        <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+          <div class="grid">
+            <p style="font-size: 13px;">Monday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">3</button>
+            <button id="num" style="font-size: 13px; text-align: center;">10</button>
+            <button id="num" style="font-size: 13px; text-align: center;">17</button>
+            <button id="num" style="font-size: 13px; text-align: center;">24</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Tuesday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">4</button>
+            <button id="num" style="font-size: 13px; text-align: center;">11</button>
+            <button id="num" style="font-size: 13px; text-align: center;">18</button>
+            <button id="num" style="font-size: 13px; text-align: center;">25</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Wednesday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">5</button>
+            <button id="num" style="font-size: 13px; text-align: center;">12</button>
+            <button id="num" style="font-size: 13px; text-align: center;">19</button>
+            <button id="num" style="font-size: 13px; text-align: center;">26</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Thursday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">6</button>
+            <button id="num" style="font-size: 13px; text-align: center;">13</button>
+            <button id="num" style="font-size: 13px; text-align: center;">20</button>
+            <button id="num" style="font-size: 13px; text-align: center;">27</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Friday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">7</button>
+            <button id="num" style="font-size: 13px; text-align: center;">14</button>
+            <button id="num" style="font-size: 13px; text-align: center;">21</button>
+            <button id="num" style="font-size: 13px; text-align: center;">28</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Saturday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">1</button>
+            <button id="num" style="font-size: 13px; text-align: center;">8</button>
+            <button id="num" style="font-size: 13px; text-align: center;">15</button>
+            <button id="num" style="font-size: 13px; text-align: center;">22</button>
+            <button id="num" style="font-size: 13px; text-align: center;">29</button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Sunday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">2</button>
+            <button id="num" style="font-size: 13px; text-align: center;">9</button>
+            <button id="num" style="font-size: 13px; text-align: center;">16</button>
+            <button id="num" style="font-size: 13px; text-align: center;">23</button>
+            <button id="num" style="font-size: 13px; text-align: center;">30</button>
+          </div>
+        </div>
+    </div>
+    <div class="calendar-month">
+        <!-- March -->
+        <h2 style="text-align: center;">July 2024</h2>
+        <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+          <div class="grid">
+            <p style="font-size: 13px;">Sunday</p>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="num" style="font-size: 13px; text-align: center;">7</button>
+            <button id="num" style="font-size: 13px; text-align: center;">14</button>
+            <button id="num" style="font-size: 13px; text-align: center;">21</button>
+            <button id="num" style="font-size: 13px; text-align: center;">28</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Monday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">1</button>
+            <button id="num" style="font-size: 13px; text-align: center;">8</button>
+            <button id="num" style="font-size: 13px; text-align: center;">15</button>
+            <button id="num" style="font-size: 13px; text-align: center;">22</button>
+            <button id="num" style="font-size: 13px; text-align: center;">29</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Tuesday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">2</button>
+            <button id="num" style="font-size: 13px; text-align: center;">9</button>
+            <button id="num" style="font-size: 13px; text-align: center;">16</button>
+            <button id="num" style="font-size: 13px; text-align: center;">23</button>
+            <button id="num" style="font-size: 13px; text-align: center;">30</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Wednesday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">3</button>
+            <button id="num" style="font-size: 13px; text-align: center;">10</button>
+            <button id="num" style="font-size: 13px; text-align: center;">17</button>
+            <button id="num" style="font-size: 13px; text-align: center;">24</button>
+            <button id="num" style="font-size: 13px; text-align: center;">31</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Thursday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">4</button>
+            <button id="num" style="font-size: 13px; text-align: center;">11</button>
+            <button id="num" style="font-size: 13px; text-align: center;">18</button>
+            <button id="num" style="font-size: 13px; text-align: center;">25</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Friday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">5</button>
+            <button id="num" style="font-size: 13px; text-align: center;">12</button>
+            <button id="num" style="font-size: 13px; text-align: center;">19</button>
+            <button id="num" style="font-size: 13px; text-align: center;">26</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+          <div class="grid">
+            <p style="font-size: 13px;">Saturday</p>
+            <button id="num" style="font-size: 13px; text-align: center;">6</button>
+            <button id="num" style="font-size: 13px; text-align: center;">13</button>
+            <button id="num" style="font-size: 13px; text-align: center;">20</button>
+            <button id="num" style="font-size: 13px; text-align: center;">27</button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+            <button id="nu" style="font-size: 13px; text-align: center;"></button>
+          </div>
+        </div>
+    </div>
+    <div class="calendar-month">
+        <!-- March -->
+        <h2 style="text-align: center;">August 2024</h2>
+        <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+          <p style="font-size: 13px;">Sunday</p>
+          <div class="grid">
+            <p style="font-size: 13px;">Monday</p>
+          </div>
+          <p style="font-size: 13px;">Tuesday</p>
+          <p style="font-size: 13px;">Wednesday</p>
+          <p style="font-size: 13px;">Thursday</p>
+          <p style="font-size: 13px;">Friday</p>
+          <p style="font-size: 13px;">Saturday</p>
+        </div>
+    </div>
+    <div class="calendar-month">
+        <!-- March -->
+        <h2 style="text-align: center;">September 2024</h2>
+        <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+          <p style="font-size: 13px;">Sunday</p>
+          <div class="grid">
+            <p style="font-size: 13px;">Monday</p>
+          </div>
+          <p style="font-size: 13px;">Tuesday</p>
+          <p style="font-size: 13px;">Wednesday</p>
+          <p style="font-size: 13px;">Thursday</p>
+          <p style="font-size: 13px;">Friday</p>
+          <p style="font-size: 13px;">Saturday</p>
+        </div>
+    </div>
+    <div class="calendar-month">
+        <!-- March -->
+        <h2 style="text-align: center;">October 2024</h2>
+        <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+          <p style="font-size: 13px;">Sunday</p>
+          <div class="grid">
+            <p style="font-size: 13px;">Monday</p>
+          </div>
+          <p style="font-size: 13px;">Tuesday</p>
+          <p style="font-size: 13px;">Wednesday</p>
+          <p style="font-size: 13px;">Thursday</p>
+          <p style="font-size: 13px;">Friday</p>
+          <p style="font-size: 13px;">Saturday</p>
+        </div>
+    </div>
+    <div class="calendar-month">
+        <!-- March -->
+        <h2 style="text-align: center;">November 2024</h2>
+        <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+          <p style="font-size: 13px;">Sunday</p>
+          <div class="grid">
+            <p style="font-size: 13px;">Monday</p>
+          </div>
+          <p style="font-size: 13px;">Tuesday</p>
+          <p style="font-size: 13px;">Wednesday</p>
+          <p style="font-size: 13px;">Thursday</p>
+          <p style="font-size: 13px;">Friday</p>
+          <p style="font-size: 13px;">Saturday</p>
+        </div>
+    </div>
+    <div class="calendar-month">
+        <!-- March -->
+        <h2 style="text-align: center;">December 2024</h2>
+        <div style="justify-content: space-evenly; display: flex; cursor: pointer;">
+          <p style="font-size: 13px;">Sunday</p>
+          <div class="grid">
+            <p style="font-size: 13px;">Monday</p>
+          </div>
+          <p style="font-size: 13px;">Tuesday</p>
+          <p style="font-size: 13px;">Wednesday</p>
+          <p style="font-size: 13px;">Thursday</p>
+          <p style="font-size: 13px;">Friday</p>
+          <p style="font-size: 13px;">Saturday</p>
+        </div>
+    </div>
+    <!-- Add more months as needed -->
+</div>
+<a href="index.html" class="blue">Go Back</a>
+
+<script>
+    // JavaScript for smooth scrolling
+    function scrollCalendar(direction) {
+        const container = document.querySelector('.calendar-container');
+        const scrollAmount = direction === 'left' ? -container.clientWidth : container.clientWidth;
+        container.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+
+    function highlightCurrentDate() {
+        var currentDate = new Date();
+        var day = currentDate.getDate();
+        var month = currentDate.getMonth();
+        var year = currentDate.getFullYear();
+        var buttons = document.querySelectorAll('.calendar-month button');
+
+        buttons.forEach(function(button) {
+            var buttonDay = parseInt(button.textContent);
+            var buttonMonth = button.closest('.calendar-month').querySelector('h2').textContent;
+            buttonMonth = buttonMonth.split(' ')[0];
+            var buttonYear = button.closest('.calendar-month').querySelector('h2').textContent;
+            buttonYear = buttonYear.split(' ')[1];
+
+            if (buttonDay === day && buttonMonth === getMonthName(month) && buttonYear === year.toString()) {
+                button.classList.add('current-date');
+            }
+        });
+    }
+
+    // Function to get month name from its index
+    function getMonthName(monthIndex) {
+        var monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+        return monthNames[monthIndex];
+    }
+
+    // Call the function to highlight the current date
+    highlightCurrentDate();
+</script>
+
+</body>
+</html>

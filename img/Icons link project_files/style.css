@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.font{
+    font-size: 100px;
+}
+
+.down{
+    margin-top: 50px;
+}
+
+.color{
+    color: crimson;
+    cursor: pointer;
+    transition: all 1.3s ease-in-out;
+}
+
+.color:hover{
+    color: cornflowerblue;
+    cursor: pointer;
+    transition: all 1.3s ease-in-out;
+}
+
+.width{
+    cursor: pointer;
+    transition: all 1.3s ease-in-out;
+    border: none;
+    outline: none;
+    width: 100px;
+    color: crimson;
+}
+.width:focus{
+    border: none;
+}
+.width:hover{
+    color: cornflowerblue;
+    transition: all 1.3s ease-in-out;
+}
+
+.fonts{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}

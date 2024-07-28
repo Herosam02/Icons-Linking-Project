@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Data About You</title>
+    <link rel="stylesheet" href="plus.css">
+</head>
+<body>
+    <table border="1" class="container mt-4">
+        <thead>
+            <tbody>
+                <td class="container">Name</td>
+                <td class="container">Age</td>
+                <td class="container">Number</td>
+                <td class="container">Email</td>
+                <td class="container">Complextion</td>
+                <td class="container">SEARCH</td>
+                <!-- <td class="container">image</td> -->
+            </tbody>
+        </thead>
+        <td>
+            <tbody>
+                <td onkeyup="return text()"><input type="text" id="myInput"></td>
+                <td onkeyup="return ages()"><input type="number" id="myages"/></td>
+                <td><input type="number"/></td>
+                <td><input type="email"></td>
+                <td><input type="text"/></td>
+                <td><input type="search" name="search" id="search"></td>
+                <!-- <td><input type="file" name="file" id="file"></td> -->
+        </tbody>
+        <tbody>
+                <td onkeyup="return texts()"><input type="text" id="mInput"></td>
+                <td onkeyup="return nage()"><input type="number" id="mynag"/></td>
+                <td><input type="number"/></td>
+                <td><input type="email"></td>
+                <td><input type="text"/></td>
+                <td><input type="search" name="search" id="search"></td>
+                <!-- <td><input type="file" name="file" id="file"></td> -->
+        </tbody>
+        <tbody>
+                <td onkeyup="return textt()"><input type="text" id="mInputs"></td>
+                <td onkeyup="return nae()"><input type="number" id="myna"/></td>
+                <td><input type="number"/></td>
+                <td><input type="email"></td>
+                <td><input type="text"/></td>
+                <td><input type="search" name="search" id="search"></td>
+                <!-- <td><input type="file" name="file" id="file"></td> -->
+        </tbody>
+        </td>
+    </table>
+
+    <div style="margin-bottom: 10px; display: flex; font-size: 30px; margin-left: 30px;">
+        <label>Names = </label>
+        <span id="text" style="padding-left: 30px;"><p id="input"></p></span>,
+        <span id="texts" style="padding-left: 30px; padding-right: 30px;"><p id="inpu"></p></span>and
+        <span id="textt" style="padding-left: 30px;"><p id="inp"></p></span>
+    </div>
+
+    <div style="margin-bottom: 30px; display: flex; font-size: 30px; margin-left: 30px;">
+        <label>Ages = </label>
+        <span id="ages" style="padding-left: 30px;"><p id="age"></p></span>,
+        <span id="nage" style="padding-left: 30px; padding-right: 30px;"><p id="nag"></p></span>and
+        <span id="nae" style="padding-left: 30px;"><p id="na"></p></span>
+    </div>
+
+    <a href="index.html" class="blue">Go Back</a>
+
+    <script src="plus.js"></script>
+</body>
+</html>
